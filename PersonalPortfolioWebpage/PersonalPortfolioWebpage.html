@@ -5,23 +5,46 @@
     <meta charset="utf-8">
     <title>Alex Antomonov Personal Portfolio Webpage</title>
     <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap.min.css">
+    <style>
+        @import 'https://fonts.googleapis.com/css?family=Ubuntu';
+        body {
+            font-family: 'Ubuntu', sans-serif;
+            background: #D3D3D3;
+            padding-top: 2px;
+        }
+        
+        .header {
+            background-color: white;
+            padding-top: 5px;
+        }
+    </style>
     <script type="text/javascript" src="http://code.jquery.com/jquery.min.js"></script>
 </head>
 
 <body>
     <div class="container-fluid">
-		<div class="row">
-			<div class="col-xs-6">
-				<h4>Alex Antomonov</h4>
-			</div>
-			<div class="col-xs-6">
-				<ul class="nav nav-pills navbar-right">
-					<li class="active"><a href="#"><i class="glyphicon glyphicon-home"></i> About</a></li>
-					<li><a href="#"><i class="glyphicon glyphicon-user"></i> Portfolio</a></li>
-					<li><a href="#"><i class="glyphicon glyphicon-send"></i> Contact</a></li>
-				</ul>
-			</div>
-		</div>
+        <div class="row header">
+            <div class="col-xs-12">
+                <nav class="navbar navbar-right navbar-static-top navbar-inverse" role="navigation">
+                    <div class="container-fluid">
+                        <div class="collapse navbar-collapse" id="bs-example-navbar-collapse-1">
+                            <ul class="nav">
+                                <li class="active"><a href="#"><i class="glyphicon glyphicon-home"></i> About</a></li>
+                                <li class="divider-vertical"></li>
+                                <li><a href="#"><i class="glyphicon glyphicon-user"></i> Portfolio</a></li>
+                                <li class="divider-vertical"></li>
+                                <li><a href="#"><i class="glyphicon glyphicon-send"></i> Contact</a></li>
+                            </ul>
+                        </div>
+                    </div>
+                </nav>
+            </div>
+        </div>
+        <ol class="breadcrumb">
+            <li><a href="#">Главная</a></li>
+            <li><a href="#">Библиотека</a></li>
+            <li class="active">Данные</li>
+        </ol>
         <div class="row">
             <div class="col-xs-4">
                 <h2>Блок №1</h2>
@@ -39,7 +62,7 @@
         <hr>
         <div class="row">
             <div class="col-xs-12">
-                <footer>
+                <footer class="text-center">
                     <h5 class="text-muted">Personal Portfolio Webpage created by <span class="glyphicon glyphicon-copyright-mark"></span>&nbsp;<a href="https://www.freecodecamp.com/suomaa" target="_blank">Alex Antomonov</a>.</h5>
                 </footer>
             </div>

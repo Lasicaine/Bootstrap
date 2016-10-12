@@ -3,62 +3,136 @@
 
 <head>
     <meta charset="utf-8">
-    <title>Alex Antomonov Personal Portfolio Webpage</title>
+    <title>Alex Antomonov Personal Portfolio</title>
     <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap.min.css">
     <style>
         @import 'https://fonts.googleapis.com/css?family=Ubuntu';
         body {
             font-family: 'Ubuntu', sans-serif;
             background: #D3D3D3;
+            padding-top: 10px;
+        }
+        
+        .part-header {
+            color: #FFFFFF;
+            background: #003153;
+        }
+        
+        a,
+        a:hover,
+        a:focus,
+        a:visited {
+            text-decoration: none;
         }
     </style>
     <script type="text/javascript" src="http://code.jquery.com/jquery.min.js"></script>
 </head>
 
 <body>
-    <nav class="navbar navbar-default navbar-static-top navbar-inverse" role="navigation">
+    <nav class="navbar navbar-default navbar-fixed-top navbar-inverse" role="navigation">
         <div class="container-fluid">
             <div class="navbar-header">
-                <a class="navbar-brand" href="#">Alex Antomonov</a>
+                <a class="navbar-brand" href="#articleAbout">Alex Antomonov</a>
             </div>
             <ul class="nav navbar-nav navbar-right">
-                <li class="active"><a href="#"><i class="glyphicon glyphicon-home"></i>&nbsp;&nbsp;About</a></li>
-                <li><a href="#"><i class="glyphicon glyphicon-user"></i>&nbsp;&nbsp;Portfolio</a></li>
-                <li><a href="#"><i class="glyphicon glyphicon-send"></i>&nbsp;&nbsp;Contact</a></li>
+                <li class="active"><a href="#articleAbout"><i class="glyphicon glyphicon-home"></i>&nbsp;&nbsp;About</a></li>
+                <li><a href="#articlePortfolio"><i class="glyphicon glyphicon-user"></i>&nbsp;&nbsp;Portfolio</a></li>
+                <li><a href="#articleContact"><i class="glglyphicon glyphicon-envelope"></i>&nbsp;&nbsp;Contact</a></li>
             </ul>
         </div>
     </nav>
     <div class="container-fluid">
-        <div class="row header">
-            <div class="col-xs-12">
+        <article id="articleAbout">
+            <div class="row part-header page-header text-center">
+                <div class="col-xs-12">
+                    <h1>About</h1>
+                </div>
             </div>
-        </div>
-        <div class="row">
-            <div class="col-sm-6 col-md-4">
-                <div class="thumbnail">
-                    <img src="..." alt="...">
-                    <div class="caption">
-                        <h3>Thumbnail label</h3>
-                        <p>...</p>
-                        <p><a href="#" class="btn btn-primary" role="button">Button</a> <a href="#" class="btn btn-default" role="button">Button</a></p>
+        </article>
+        <article id="articlePortfolio">
+            <div class="row part-header page-header text-center">
+                <div class="col-xs-12">
+                    <h1>Portfolio</h1>
+                </div>
+            </div>
+            <div class="row">
+                <div class="col-sm-6 col-md-4">
+                    <div class="thumbnail">
+                        <img src="..." alt="...">
+                        <div class="caption">
+                            <h3>Thumbnail label</h3>
+                            <p>...</p>
+                            <p><a href="#" class="btn btn-primary" role="button">Button</a> <a href="#" class="btn btn-default" role="button">Button</a></p>
+                        </div>
+                    </div>
+                </div>
+                <div class="col-sm-6 col-md-4">
+                    <div class="thumbnail">
+                        <img src="..." alt="...">
+                        <div class="caption">
+                            <h3>Thumbnail label</h3>
+                            <p>...</p>
+                            <p><a href="#" class="btn btn-primary" role="button">Button</a> <a href="#" class="btn btn-default" role="button">Button</a></p>
+                        </div>
+                    </div>
+                </div>
+                <div class="col-sm-6 col-md-4">
+                    <div class="thumbnail">
+                        <img src="..." alt="...">
+                        <div class="caption">
+                            <h3>Thumbnail label</h3>
+                            <p>...</p>
+                            <p><a href="#" class="btn btn-primary" role="button">Button</a> <a href="#" class="btn btn-default" role="button">Button</a></p>
+                        </div>
+                    </div>
+                </div>
+                <div class="col-sm-6 col-md-4">
+                    <div class="thumbnail">
+                        <img src="..." alt="...">
+                        <div class="caption">
+                            <h3>Thumbnail label</h3>
+                            <p>...</p>
+                            <p><a href="#" class="btn btn-primary" role="button">Button</a> <a href="#" class="btn btn-default" role="button">Button</a></p>
+                        </div>
+                    </div>
+                </div>
+                <div class="col-sm-6 col-md-4">
+                    <div class="thumbnail">
+                        <img src="..." alt="...">
+                        <div class="caption">
+                            <h3>Thumbnail label</h3>
+                            <p>...</p>
+                            <p><a href="#" class="btn btn-primary" role="button">Button</a> <a href="#" class="btn btn-default" role="button">Button</a></p>
+                        </div>
+                    </div>
+                </div>
+                <div class="col-sm-6 col-md-4">
+                    <div class="thumbnail">
+                        <img src="..." alt="...">
+                        <div class="caption">
+                            <h3>Thumbnail label</h3>
+                            <p>...</p>
+                            <p><a href="#" class="btn btn-primary" role="button">Button</a> <a href="#" class="btn btn-default" role="button">Button</a></p>
+                        </div>
                     </div>
                 </div>
             </div>
-        </div>
-        <div class="row">
-            <div class="col-xs-4">
-                <h2>Блок №1</h2>
-                <p>Материал блока №1</p>
+        </article>
+        <article id="articleContact">
+            <div class="row part-header page-header text-center">
+                <div class="col-xs-12">
+                    <h1>Contact</h1>
+                </div>
             </div>
-            <div class="col-xs-4">
-                <h2>Блок №2</h2>
-                <p>Материал блока №2</p>
+            <div class="row">
+                <div class="col-xs-6 text-center">
+                    <h2><a href="https://codepen.io/Suomaa" target="_blank"><i class="glyphicon glyphicon-share-alt"></i>&nbsp;CodePen</a></h2>
+                </div>
+                <div class="col-xs-6 text-center">
+                    <h2><a href="https://github.com/Suomaa" target="_blank"><i class="glyphicon glyphicon-share-alt"></i>&nbsp;GitHub</a></h2>
+                </div>
             </div>
-            <div class="col-xs-4">
-                <h2>Блок №3</h2>
-                <p>Материал блока №3</p>
-            </div>
-        </div>
+        </article>
         <hr>
         <div class="row">
             <div class="col-xs-12">

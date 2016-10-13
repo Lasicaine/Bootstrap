@@ -24,8 +24,30 @@
         a:visited {
             text-decoration: none;
         }
+        
+        .img-thumb {
+            width: 726px;
+            height: 600px;
+        }
+        
+        .icons {
+            width: 200px;
+            height: 200px;
+        }
     </style>
-    <script type="text/javascript" src="http://code.jquery.com/jquery.min.js"></script>
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.1.1/jquery.min.js"></script>
+    <script>
+        $(document).ready(function(){
+
+        // jQuery methods go here...
+
+        });
+        $(function(){
+
+   // jQuery methods go here...
+
+        });
+    </script>
 </head>
 
 <body>
@@ -35,7 +57,7 @@
                 <a class="navbar-brand" href="#articleAbout">Alex Antomonov</a>
             </div>
             <ul class="nav navbar-nav navbar-right">
-                <li class="active"><a href="#articleAbout"><i class="glyphicon glyphicon-home"></i>&nbsp;&nbsp;About</a></li>
+                <li class="active"><a id="1" href="#articleAbout"><i class="glyphicon glyphicon-home"></i>&nbsp;&nbsp;About</a></li>
                 <li><a href="#articlePortfolio"><i class="glyphicon glyphicon-user"></i>&nbsp;&nbsp;Portfolio</a></li>
                 <li><a href="#articleContact"><i class="glglyphicon glyphicon-envelope"></i>&nbsp;&nbsp;Contact</a></li>
             </ul>
@@ -55,33 +77,33 @@
                     <h1>Portfolio</h1>
                 </div>
             </div>
-            <div class="row">
+            <div class="row text-center">
                 <div class="col-sm-6 col-md-4">
                     <div class="thumbnail">
-                        <img src="..." alt="...">
+                        <img class="img-responsive img-thumb" src="https://s11.postimg.org/atrbpkovn/screentributepage.png" alt="ScreenShot Tribute Page of Elias Lönnrot">
                         <div class="caption">
-                            <h3>Thumbnail label</h3>
-                            <p>...</p>
+                            <h3>Tribute Page of Elias Lönnrot</h3>
+                            <p>Project for FreeCodeCamp</p>
                             <p><a href="#" class="btn btn-primary" role="button">Button</a> <a href="#" class="btn btn-default" role="button">Button</a></p>
                         </div>
                     </div>
                 </div>
                 <div class="col-sm-6 col-md-4">
                     <div class="thumbnail">
-                        <img src="..." alt="...">
+                        <img class="img-responsive img-thumb" src="https://s15.postimg.org/rotxua31n/screenskopinauto.png" alt="ScreenShot Timetable bus station city Skopin">
                         <div class="caption">
-                            <h3>Thumbnail label</h3>
-                            <p>...</p>
+                            <h3>TimeTable</h3>
+                            <p>Timetable Bus Station City Skopin</p>
                             <p><a href="#" class="btn btn-primary" role="button">Button</a> <a href="#" class="btn btn-default" role="button">Button</a></p>
                         </div>
                     </div>
                 </div>
                 <div class="col-sm-6 col-md-4">
                     <div class="thumbnail">
-                        <img src="..." alt="...">
+                        <img class="img-responsive img-thumb" src="https://s9.postimg.org/eom60a9kf/screentfomsrzn.png" alt="Official Site of Territorial Compulsory Medical Insurance Fund">
                         <div class="caption">
-                            <h3>Thumbnail label</h3>
-                            <p>...</p>
+                            <h3>TFOMS</h3>
+                            <p>Official Site of Territorial Compulsory Medical Insurance Fund</p>
                             <p><a href="#" class="btn btn-primary" role="button">Button</a> <a href="#" class="btn btn-default" role="button">Button</a></p>
                         </div>
                     </div>
@@ -124,11 +146,19 @@
                     <h1>Contact</h1>
                 </div>
             </div>
-            <div class="row">
-                <div class="col-xs-6 text-center">
+            <div class="row text-center">
+                <div class="col-xs-6">
+                    <a href="https://codepen.io/Suomaa" target="_blank"><img class="icons" src="https://s12.postimg.org/4nhy2fdd9/github.png" alt="GitHub icons"></a>
+                </div>
+                <div class="col-xs-6">
+                    <a href="https://github.com/Suomaa" target="_blank"><img class="icons" src="https://s11.postimg.org/di0jybonn/codepen.png" alt="CodePen icons"></a>
+                </div>
+            </div>
+            <div class="row text-center">
+                <div class="col-xs-6">
                     <h2><a href="https://codepen.io/Suomaa" target="_blank"><i class="glyphicon glyphicon-share-alt"></i>&nbsp;CodePen</a></h2>
                 </div>
-                <div class="col-xs-6 text-center">
+                <div class="col-xs-6">
                     <h2><a href="https://github.com/Suomaa" target="_blank"><i class="glyphicon glyphicon-share-alt"></i>&nbsp;GitHub</a></h2>
                 </div>
             </div>

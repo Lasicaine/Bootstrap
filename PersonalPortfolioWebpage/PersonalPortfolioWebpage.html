@@ -10,7 +10,7 @@
         body {
             font-family: 'Ubuntu', sans-serif;
             background: #D3D3D3;
-            padding-top: 10px;
+            margin-top: 10px;
         }
         
         .part-header {
@@ -37,15 +37,16 @@
     </style>
     <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.1.1/jquery.min.js"></script>
     <script>
-        $(document).ready(function(){
-
-        // jQuery methods go here...
-
-        });
-        $(function(){
-
-   // jQuery methods go here...
-
+        $(function() {
+            $("nav a").click(function(event) {
+                event.preventDefault();
+                $("nav li").removeClass('active');
+                $(this).parent().addClass('active');
+                var navlink = $(this).attr("href");
+                $('html, body').animate({
+                    scrollTop: $(navlink).offset().top - 50
+                }, 2000);
+            });
         });
     </script>
 </head>
@@ -57,7 +58,7 @@
                 <a class="navbar-brand" href="#articleAbout">Alex Antomonov</a>
             </div>
             <ul class="nav navbar-nav navbar-right">
-                <li class="active"><a id="1" href="#articleAbout"><i class="glyphicon glyphicon-home"></i>&nbsp;&nbsp;About</a></li>
+                <li class="active"><a href="#articleAbout"><i class="glyphicon glyphicon-home"></i>&nbsp;&nbsp;About</a></li>
                 <li><a href="#articlePortfolio"><i class="glyphicon glyphicon-user"></i>&nbsp;&nbsp;Portfolio</a></li>
                 <li><a href="#articleContact"><i class="glglyphicon glyphicon-envelope"></i>&nbsp;&nbsp;Contact</a></li>
             </ul>

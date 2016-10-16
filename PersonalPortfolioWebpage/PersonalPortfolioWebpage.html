@@ -40,12 +40,29 @@
     <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.1.1/jquery.min.js"></script>
     <script>
         $(function() {
+			var $htmlBody = $('html, body');
+			
+            /*$("[data-class-notlink]").click(function(event) {
+				
+				$("nav li").removeClass('active');
+				$("ul li:first").addClass('active');
+				
+            });*/
+			
             $("nav a").click(function(event) {
-                event.preventDefault();
-                $("nav li").removeClass('active');
-                $(this).parent().addClass('active');
-                var navlink = $(this).attr("href");
-                $('html, body').animate({
+                var $this = $(this);
+				event.preventDefault();
+				$("nav li").removeClass('active');
+				
+				if (!$this.hasClass('navbar-brand')) {
+					$this.parent().addClass('active');}
+				else {
+					$("ul li:first").addClass('active');
+				};
+				
+                var navlink = $this.attr("href");
+				
+                $htmlBody.animate({
                     scrollTop: $(navlink).offset().top - 50
                 }, 2000);
             });
@@ -70,8 +87,17 @@
         <article id="articleAbout">
             <div class="row part-header page-header text-center">
                 <div class="col-xs-12">
-                    <h1>About</h1>
-                    <img class="img-responsive" src="https://avatars2.githubusercontent.com/u/20427181?v=3&s=400" alt="Suomaa Avatar">
+                    <h1>About Me</h1>
+                </div>
+			</div>
+			<div class="row text-center">
+				<div class="col-xs-8">
+					<h1>Junior Front-End Developer, with practical experience in Information Security and Test Management.</h1>
+					<h1>;)</h1>
+					<h3>You can follow me on GitHub or CodePen.</h3>
+                </div>
+				<div class="col-xs-4">
+                    <img class="img-responsive img-thumbnail" src="https://avatars2.githubusercontent.com/u/20427181?v=3&s=400" alt="Suomaa Avatar">
                 </div>
             </div>
         </article>
@@ -107,7 +133,7 @@
                         <img class="img-responsive img-thumb" src="https://s16.postimg.org/65ylc1xs5/screentfomsrzn0.png" alt="Official Site of Territorial Compulsory Medical Insurance Fund">
                         <div class="caption">
                             <h3>TFOMS</h3>
-                            <p>Official Site of Territorial Compulsory Medical Insurance Fund</p>
+                            <p>Official Site of TFOMS</p>
                             <p><a href="http://tfoms-rzn.ru" target="_blank" class="btn btn-primary" role="button"><i class="glyphicon glyphicon-hand-right"></i>&nbsp;&nbsp;Link</a></p>
                         </div>
                     </div>
@@ -118,7 +144,7 @@
                         <div class="caption">
                             <h3>Coming Soon</h3>
                             <p>Next Web Project is......</p>
-                            <p><a href="#" class="btn btn-primary" role="button"><i class="glyphicon glyphicon-hand-right"></i>&nbsp;&nbsp;Link</a></p>
+                            <p><a data-class-notlink="notlink" href="#" class="btn btn-primary" role="button"><i class="glyphicon glyphicon-hand-right"></i>&nbsp;&nbsp;Link</a></p>
                         </div>
                     </div>
                 </div>
@@ -128,7 +154,7 @@
                         <div class="caption">
                             <h3>Coming Soon</h3>
                             <p>Next Web Project is......</p>
-                            <p><a href="#" class="btn btn-primary" role="button"><i class="glyphicon glyphicon-hand-right"></i>&nbsp;&nbsp;Link</a></p>
+                            <p><a data-class-notlink="notlink" href="#" class="btn btn-primary" role="button"><i class="glyphicon glyphicon-hand-right"></i>&nbsp;&nbsp;Link</a></p>
                         </div>
                     </div>
                 </div>
@@ -138,7 +164,7 @@
                         <div class="caption">
                             <h3>Coming Soon</h3>
                             <p>Next Web Project is......</p>
-                            <p><a href="#" class="btn btn-primary" role="button"><i class="glyphicon glyphicon-hand-right"></i>&nbsp;&nbsp;Link</a></p>
+                            <p><a data-class-notlink="notlink" href="#" class="btn btn-primary" role="button"><i class="glyphicon glyphicon-hand-right"></i>&nbsp;&nbsp;Link</a></p>
                         </div>
                     </div>
                 </div>

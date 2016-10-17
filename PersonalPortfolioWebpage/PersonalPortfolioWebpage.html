@@ -37,26 +37,26 @@
         }
         
         .min-size {
-            min-width: 721px;
+            min-width: 450px;
         }
     </style>
     <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.1.1/jquery.min.js"></script>
     <script>
         $(function() {
             var $htmlBody = $('html, body');
+            var $body = $("body");
 
+            function paddingTop() {
+                var hightNav = $("nav").height();
+                var headerMarginTop = 40;
 
+                $body.css("padding-top", (hightNav - headerMarginTop) + "px");
 
-            /*$(window).resize(function() {
-                var hightnav = $("nav").height();
-                var widthnav = $("nav").width();
-                if (widthnav < 768) {
-                    $("body").css("margin-top", hightnav + "px");
-                } else {
-                    $("body").css("margin-top", 0 + "px");
-                }
+            };
 
-            });*/
+            paddingTop();
+
+            $(window).resize(paddingTop);
 
             $("[data-class-notlink]").click(function(event) {
 
@@ -76,20 +76,23 @@
                     $("ul li:first").addClass('active');
                 };
 
-                var navlink = $this.attr("href");
+                var navLink = $this.attr("href");
+                var hightNav = $("nav").height();
 
                 $htmlBody.animate({
-                    scrollTop: $(navlink).offset().top - 50
+                    scrollTop: $(navLink).offset().top - hightNav
                 }, 2000);
             });
 
-            $(window).scroll(function() {
+            $(window).scroll(function(event) {
+                var $window = $(window);
+                var scrolling = $window.scrollTop();
 
-                if ($(window).scrollTop() == $(document).height() - $(window).height()) {
+                if (scrolling == $(document).height() - $window.height()) {
                     $("nav li").removeClass('active');
                     $("ul li:last").addClass('active');
                 } else {
-                    if ($(window).scrollTop() == 0) {
+                    if (scrolling === 0) {
                         $("nav li").removeClass('active');
                         $("ul li:first").addClass('active');
                     } else {
@@ -103,7 +106,7 @@
     </script>
 </head>
 
-<body class="min-size">
+<body>
     <nav class="navbar navbar-default navbar-fixed-top navbar-inverse" role="navigation">
         <div class="container-fluid">
             <div class="navbar-header">
@@ -116,7 +119,7 @@
             </ul>
         </div>
     </nav>
-    <div class="container-fluid">
+    <div class="container-fluid min-size">
         <article id="articleAbout">
             <div class="row part-header page-header text-center">
                 <div class="col-xs-12">
@@ -156,7 +159,7 @@
                         <img class="img-responsive img-thumb" src="https://s12.postimg.org/g1ngeghst/screenskopinauto0.png" alt="ScreenShot Timetable bus station city Skopin">
                         <div class="caption">
                             <h3>TimeTable</h3>
-                            <p>Timetable Bus Station City Skopin</p>
+                            <p>Timetable Bus Station</p>
                             <p><a href="http://skopinauto.hol.es" target="_blank" class="btn btn-primary" role="button"><i class="glyphicon glyphicon-hand-right"></i>&nbsp;&nbsp;Link</a></p>
                         </div>
                     </div>

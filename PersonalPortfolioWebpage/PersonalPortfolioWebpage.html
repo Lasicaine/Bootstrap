@@ -10,7 +10,6 @@
         body {
             font-family: 'Ubuntu', sans-serif;
             background: #D3D3D3;
-            margin-top: 10px;
         }
         
         .part-header {
@@ -36,11 +35,28 @@
             width: 200px;
             height: 200px;
         }
+        
+        .min-size {
+            min-width: 721px;
+        }
     </style>
     <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.1.1/jquery.min.js"></script>
     <script>
         $(function() {
             var $htmlBody = $('html, body');
+
+
+
+            /*$(window).resize(function() {
+                var hightnav = $("nav").height();
+                var widthnav = $("nav").width();
+                if (widthnav < 768) {
+                    $("body").css("margin-top", hightnav + "px");
+                } else {
+                    $("body").css("margin-top", 0 + "px");
+                }
+
+            });*/
 
             $("[data-class-notlink]").click(function(event) {
 
@@ -87,7 +103,7 @@
     </script>
 </head>
 
-<body>
+<body class="min-size">
     <nav class="navbar navbar-default navbar-fixed-top navbar-inverse" role="navigation">
         <div class="container-fluid">
             <div class="navbar-header">

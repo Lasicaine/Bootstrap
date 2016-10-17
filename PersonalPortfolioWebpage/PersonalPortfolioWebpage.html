@@ -40,28 +40,28 @@
     <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.1.1/jquery.min.js"></script>
     <script>
         $(function() {
-			var $htmlBody = $('html, body');
-			
-            /*$("[data-class-notlink]").click(function(event) {
-				
-				$("nav li").removeClass('active');
-				$("ul li:first").addClass('active');
-				
-            });*/
-			
+            var $htmlBody = $('html, body');
+
+            $("[data-class-notlink]").click(function(event) {
+                
+                $("nav li").removeClass('active');
+                $("ul li:first").addClass('active');
+
+            });
+
             $("nav a").click(function(event) {
                 var $this = $(this);
-				event.preventDefault();
-				$("nav li").removeClass('active');
-				
-				if (!$this.hasClass('navbar-brand')) {
-					$this.parent().addClass('active');}
-				else {
-					$("ul li:first").addClass('active');
-				};
-				
+                event.preventDefault();
+                $("nav li").removeClass('active');
+
+                if (!$this.hasClass('navbar-brand')) {
+                    $this.parent().addClass('active');
+                } else {
+                    $("ul li:first").addClass('active');
+                };
+
                 var navlink = $this.attr("href");
-				
+
                 $htmlBody.animate({
                     scrollTop: $(navlink).offset().top - 50
                 }, 2000);
@@ -89,14 +89,14 @@
                 <div class="col-xs-12">
                     <h1>About Me</h1>
                 </div>
-			</div>
-			<div class="row text-center">
-				<div class="col-xs-8">
-					<h1>Junior Front-End Developer, with practical experience in Information Security and Test Management.</h1>
-					<h1>;)</h1>
-					<h3>You can follow me on GitHub or CodePen.</h3>
+            </div>
+            <div class="row text-center">
+                <div class="col-xs-8">
+                    <h1>Junior Front-End Developer, with practical experience in Information Security and Test Management.</h1>
+                    <h1>;)</h1>
+                    <h3>You can follow me on GitHub or CodePen.</h3>
                 </div>
-				<div class="col-xs-4">
+                <div class="col-xs-4">
                     <img class="img-responsive img-thumbnail" src="https://avatars2.githubusercontent.com/u/20427181?v=3&s=400" alt="Suomaa Avatar">
                 </div>
             </div>

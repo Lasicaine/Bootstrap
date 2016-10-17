@@ -43,7 +43,7 @@
             var $htmlBody = $('html, body');
 
             $("[data-class-notlink]").click(function(event) {
-                
+
                 $("nav li").removeClass('active');
                 $("ul li:first").addClass('active');
 
@@ -66,6 +66,23 @@
                     scrollTop: $(navlink).offset().top - 50
                 }, 2000);
             });
+
+            $(window).scroll(function() {
+
+                if ($(window).scrollTop() == $(document).height() - $(window).height()) {
+                    $("nav li").removeClass('active');
+                    $("ul li:last").addClass('active');
+                } else {
+                    if ($(window).scrollTop() == 0) {
+                        $("nav li").removeClass('active');
+                        $("ul li:first").addClass('active');
+                    } else {
+                        $("nav li").removeClass('active');
+                        $("i.glyphicon-user").closest('li').addClass('active');
+                    }
+                };
+            });
+
         });
     </script>
 </head>
